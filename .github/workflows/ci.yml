@@ -54,7 +54,7 @@ jobs:
       - name: Lerna bootstrap
         run: lerna bootstrap --hoist --force-local
       - name: Test add
-        run: lerna test --scope add --stream
+        run: lerna run test --scope add --stream
 
   test-subtract:
     runs-on: ubuntu-latest
@@ -75,4 +75,4 @@ jobs:
       - name: Lerna bootstrap
         run: lerna bootstrap --hoist --force-local
       - name: Test subtract
-        run: lerna test --scope subtract --stream
+        run: lerna run test --scope subtract --stream
