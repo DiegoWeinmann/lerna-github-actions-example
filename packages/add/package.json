@@ -1,0 +1,12 @@
+{
+  "name": "add",
+  "version": "0.0.1",
+  "description": "add two numbers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "echo add pre-commit running"
+  },
+  "author": "Diego Weinmann",
+  "license": "ISC"
+}
