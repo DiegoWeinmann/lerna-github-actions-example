@@ -56,7 +56,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - name: Cache dependencies
-        uses: ../actions/cache
+        uses: ../actions/cache.yml
         with:
           cache-path: ${{env.CACHE_PATH}}
       - name: Test add
