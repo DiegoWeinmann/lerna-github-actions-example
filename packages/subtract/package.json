@@ -4,9 +4,11 @@
   "description": "subtract two numbers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "precommit": "echo subtract pre-commit running"
+    "test": "jest"
   },
   "author": "Diego Weinmann",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
 }
