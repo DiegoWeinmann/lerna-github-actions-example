@@ -10,7 +10,6 @@ env:
   CACHE_PATH: |
     node_modules
     */*/node_modules
-  CACHE_KEY: "${{ runner.os }}-${{ hashFiles('**/package-lock.json')}}"
 
 jobs:
   build:
@@ -37,7 +36,7 @@ jobs:
           cache-name: dependencies
         with:
           path: ${{ env.CACHE_PATH }}
-          key: ${{ env.CACHE_KEY }}
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json')}}
           restore-keys: |
             ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
             ${{ runner.os }}
