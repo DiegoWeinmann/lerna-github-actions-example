@@ -1,0 +1,30 @@
+{
+  "name": "calc",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Diego Weinmann <diego.weinmann@hotmail.com>",
+  "homepage": "https://github.com/DiegoWeinmann/lerna-github-actions-example#readme",
+  "license": "ISC",
+  "main": "calc.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoWeinmann/lerna-github-actions-example.git"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "add": "0.0.1",
+    "subtract": "0.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/DiegoWeinmann/lerna-github-actions-example/issues"
+  }
+}
