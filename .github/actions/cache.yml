@@ -1,0 +1,19 @@
+name: 'CACHE'
+description: 'cache dependencies'
+inputs:
+  cache-path:
+    description: 'cache path'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      env:
+        cache-name: dependencies
+      with:
+        path: ${{ env.CACHE_PATH }}
+        key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json')}}
+        restore-keys: |
+          ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+          ${{ runner.os }}

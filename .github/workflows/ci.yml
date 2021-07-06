@@ -56,15 +56,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - name: Cache dependencies
-        uses: actions/cache@v2
-        env:
-          cache-name: dependencies
+        uses: ../actions/cache
         with:
-          path: ${{ env.CACHE_PATH }}
-          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json')}}
-          restore-keys: |
-            ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
-            ${{ runner.os }}
+          cache-path: ${{env.CACHE_PATH}}
       - name: Test add
         run: lerna run test --scope add --stream
 
