@@ -34,6 +34,9 @@ jobs:
             node_modules
             */*/node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json')}}
+          restore-keys: |
+            ${{ runner.os }}-${{ hashFiles(**/package-lock.json) }}
+            ${{ runner.os }}
 
   test-add:
     runs-on: ubuntu-latest
